@@ -10,12 +10,12 @@
 	</parent>
 
 	<groupId>com.gvt</groupId>
-	<artifactId>medical-commons</artifactId>
+	<artifactId>sdem-commons</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
-		<sonar.projectName>medical-commons</sonar.projectName>
+		<sonar.projectName>sdem-commons</sonar.projectName>
 		<sonar.exclusions>
 			**/com/gvt/commons/dto/**/*
 		</sonar.exclusions>
