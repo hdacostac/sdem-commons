@@ -1,8 +1,7 @@
-package com.gvt.commons.dto.v1.patient;
+package com.gvt.commons.dto.v1.person;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
 import javax.validation.constraints.Min;
@@ -17,7 +16,7 @@ import com.gvt.core.domain.types.Identificable;
 import com.gvt.core.domain.types.VersionableDTO;
 
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class PatientDTO implements Identificable, VersionableDTO, Serializable {
+public class PersonDTO implements Identificable, VersionableDTO, Serializable {
 
 	private static final long serialVersionUID = -8293952137314357678L;
 
@@ -76,10 +75,8 @@ public class PatientDTO implements Identificable, VersionableDTO, Serializable {
 
 	private Long sexId;
 	private Long bloodGroupId;
-	private Long professionId;
+//	private Long professionId;
 	private Long countryBirthId;
-
-	private List<FamilyRelationshipDTO> familyRelationships;
 
 	private Long version;
 
@@ -199,13 +196,13 @@ public class PatientDTO implements Identificable, VersionableDTO, Serializable {
 		this.bloodGroupId = bloodGroupId;
 	}
 
-	public Long getProfessionId() {
-		return professionId;
-	}
-
-	public void setProfessionId(Long professionId) {
-		this.professionId = professionId;
-	}
+//	public Long getProfessionId() {
+//		return professionId;
+//	}
+//
+//	public void setProfessionId(Long professionId) {
+//		this.professionId = professionId;
+//	}
 
 	public String getSanitaryDocument() {
 		return sanitaryDocument;
@@ -271,14 +268,6 @@ public class PatientDTO implements Identificable, VersionableDTO, Serializable {
 		this.identityDocumentTypeId = identityDocumentTypeId;
 	}
 
-	public List<FamilyRelationshipDTO> getFamilyRelationships() {
-		return familyRelationships;
-	}
-
-	public void setFamilyRelationships(List<FamilyRelationshipDTO> familyRelationships) {
-		this.familyRelationships = familyRelationships;
-	}
-
 	@Override
 	public Long getVersion() {
 		return version;
@@ -302,9 +291,8 @@ public class PatientDTO implements Identificable, VersionableDTO, Serializable {
 	@Override
 	public int hashCode() {
 		return Objects.hash(addressLine1, addressLine2, age, birthDate, bloodGroupId, code, countryBirthId, email,
-				familyRelationships, homePhone, id, identityDocument, identityDocumentTypeId, lastName, mobilePhone,
-				municipalityId, name, postalCodeId, professionId, provinceId, sanitaryDocument, sexId, url1FileName,
-				version);
+				homePhone, id, identityDocument, identityDocumentTypeId, lastName, mobilePhone, municipalityId, name,
+				postalCodeId, provinceId, sanitaryDocument, sexId, url1FileName, version);
 	}
 
 	@Override
@@ -315,33 +303,31 @@ public class PatientDTO implements Identificable, VersionableDTO, Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PatientDTO other = (PatientDTO) obj;
+		PersonDTO other = (PersonDTO) obj;
 		return Objects.equals(addressLine1, other.addressLine1) && Objects.equals(addressLine2, other.addressLine2)
 				&& Objects.equals(age, other.age) && Objects.equals(birthDate, other.birthDate)
 				&& Objects.equals(bloodGroupId, other.bloodGroupId) && Objects.equals(code, other.code)
 				&& Objects.equals(countryBirthId, other.countryBirthId) && Objects.equals(email, other.email)
-				&& Objects.equals(familyRelationships, other.familyRelationships)
 				&& Objects.equals(homePhone, other.homePhone) && Objects.equals(id, other.id)
 				&& Objects.equals(identityDocument, other.identityDocument)
 				&& Objects.equals(identityDocumentTypeId, other.identityDocumentTypeId)
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(mobilePhone, other.mobilePhone)
 				&& Objects.equals(municipalityId, other.municipalityId) && Objects.equals(name, other.name)
-				&& Objects.equals(postalCodeId, other.postalCodeId) && Objects.equals(professionId, other.professionId)
-				&& Objects.equals(provinceId, other.provinceId)
+				&& Objects.equals(postalCodeId, other.postalCodeId) && Objects.equals(provinceId, other.provinceId)
 				&& Objects.equals(sanitaryDocument, other.sanitaryDocument) && Objects.equals(sexId, other.sexId)
 				&& Objects.equals(url1FileName, other.url1FileName) && Objects.equals(version, other.version);
 	}
 
 	@Override
 	public String toString() {
-		return "PatientDTO [id=" + id + ", code=" + code + ", name=" + name + ", lastName=" + lastName
+		return "PersonDTO [id=" + id + ", code=" + code + ", name=" + name + ", lastName=" + lastName
 				+ ", identityDocumentTypeId=" + identityDocumentTypeId + ", identityDocument=" + identityDocument
 				+ ", sanitaryDocument=" + sanitaryDocument + ", mobilePhone=" + mobilePhone + ", homePhone=" + homePhone
 				+ ", email=" + email + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2
 				+ ", provinceId=" + provinceId + ", municipalityId=" + municipalityId + ", postalCodeId=" + postalCodeId
 				+ ", birthDate=" + birthDate + ", age=" + age + ", url1FileName=" + url1FileName + ", sexId=" + sexId
-				+ ", bloodGroupId=" + bloodGroupId + ", professionId=" + professionId + ", countryBirthId="
-				+ countryBirthId + ", familyRelationships=" + familyRelationships + ", version=" + version + "]";
+				+ ", bloodGroupId=" + bloodGroupId + ", countryBirthId=" + countryBirthId + ", version=" + version
+				+ "]";
 	}
 
 }

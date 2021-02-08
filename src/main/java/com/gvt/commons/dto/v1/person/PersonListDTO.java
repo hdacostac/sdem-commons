@@ -1,4 +1,4 @@
-package com.gvt.commons.dto.v1.patient;
+package com.gvt.commons.dto.v1.person;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class PatientListDTO implements Serializable {
+public class PersonListDTO implements Serializable {
 
 	private static final long serialVersionUID = -5341388224130637901L;
 
@@ -14,10 +14,10 @@ public class PatientListDTO implements Serializable {
 	private String name;
 	private String lastName;
 
-	public PatientListDTO() {
+	public PersonListDTO() {
 	}
 
-	public PatientListDTO(Long id, String name, String lastName) {
+	public PersonListDTO(Long id, String name, String lastName) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -69,7 +69,7 @@ public class PatientListDTO implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PatientListDTO other = (PatientListDTO) obj;
+		PersonListDTO other = (PersonListDTO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
