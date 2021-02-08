@@ -1,4 +1,4 @@
-package com.gvt.commons.dto.v1.person;
+package com.sdem.commons.dto.v1.person;
 
 import java.io.Serializable;
 

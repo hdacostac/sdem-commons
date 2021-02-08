@@ -1,4 +1,4 @@
-package com.gvt.commons.annotations;
+package com.sdem.commons.annotations;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;

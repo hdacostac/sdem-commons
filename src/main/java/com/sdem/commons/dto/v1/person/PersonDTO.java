@@ -1,4 +1,4 @@
-package com.gvt.commons.dto.v1.person;
+package com.sdem.commons.dto.v1.person;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.gvt.commons.annotations.ExtendedEmailValidator;
+import com.sdem.commons.annotations.ExtendedEmailValidator;
 import com.gvt.core.domain.types.Identificable;
 import com.gvt.core.domain.types.VersionableDTO;
 

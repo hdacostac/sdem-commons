@@ -1,4 +1,4 @@
-package com.gvt.commons.utils;
+package com.sdem.commons.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

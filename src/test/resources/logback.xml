@@ -10,7 +10,7 @@
     	</encoder>
 	</appender>
 	
-	<logger name="com.gvt" level="DEBUG" />
+	<logger name="com.sdem" level="DEBUG" />
 	
 	<root level="INFO">
 		<appender-ref ref="stdout" />

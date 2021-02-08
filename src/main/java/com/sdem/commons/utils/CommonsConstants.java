@@ -1,4 +1,4 @@
-package com.gvt.commons.utils;
+package com.sdem.commons.utils;
 
 public class CommonsConstants {
 

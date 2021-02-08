@@ -1,4 +1,4 @@
-package com.gvt.commons.dto;
+package com.sdem.commons.dto;
 
 import static pl.pojo.tester.api.assertion.Assertions.assertPojoMethodsFor;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.gvt.commons.dto.v1.person.PersonListDTO;
+import com.sdem.commons.dto.v1.person.PersonListDTO;
 
 public class PersonListDTOTest {
 
