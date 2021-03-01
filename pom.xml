@@ -43,7 +43,7 @@
 
 		<dependency>
 			<groupId>swf.assent</groupId>
-			<artifactId>swf-rest-services-core</artifactId>
+			<artifactId>swf-rest-services-commons</artifactId>
 		</dependency>
 
 		<dependency>
